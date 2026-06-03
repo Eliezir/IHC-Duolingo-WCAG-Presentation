@@ -118,43 +118,6 @@
         <div class="corner-num">03</div>
       </section>
 
-      <!-- 03 — SPLASH "dois olhares" (antes/depois) -->
-      <section class="slide splash splash2" data-title="Abertura" data-cta="CONTINUAR">
-        <div class="split">
-          <!-- como VOCÊ vê -->
-          <div class="pane see" aria-hidden="true">
-            <span class="pane-label">👁️ Como você vê</span>
-            <img class="duo" src="images/duo_twirl.gif" alt="">
-            <img class="wm" src="images/duolingo-wordmark.svg" alt="">
-            <div class="see-chips">
-              <span class="chip green">CONTINUAR</span>
-              <span class="chip plain">❤️ ❤️ ❤️</span>
-              <span class="chip blue">🔥 12</span>
-            </div>
-          </div>
-          <!-- como o LEITOR DE TELA "vê" -->
-          <div class="pane hear" aria-hidden="true">
-            <span class="pane-label">🔊 Como o leitor de tela “vê”</span>
-            <div class="hear-stack">
-              <div class="ph box">imagem — sem descrição</div>
-              <div class="ph line"></div>
-              <div class="ph row">
-                <div class="ph focus">botão</div>
-                <div class="ph">botão</div>
-                <div class="ph">botão</div>
-              </div>
-              <div class="ph box sm">imagem · ?</div>
-            </div>
-          </div>
-          <div class="split-badge">≠</div>
-        </div>
-        <div class="splash2-footer">
-          <h1>Bonito pra uns. <span class="crit">Invisível pra outros.</span></h1>
-          <p>Avaliação de Acessibilidade do Duolingo · WCAG 2.1 · eMAG · WAVE — IHC · IFAL · 2026.1</p>
-        </div>
-        <div class="corner-num">01</div>
-      </section>
-
       <!-- 02 — O QUE É O DUOLINGO -->
       <section class="slide" data-title="O que é o Duolingo?">
         <div class="ob-stage top">
@@ -170,9 +133,9 @@
               <div class="card green step"><span class="ico">🌍</span><h3>+100 milhões</h3><p>de usuários ativos por mês, em dezenas de idiomas.</p></div>
               <div class="card yellow step"><span class="ico">🎮</span><h3>Gamificado</h3><p>Ofensivas, XP, ligas, vidas e o mascote Duo.</p></div>
               <div class="card blue step"><span class="ico">🎨</span><h3>Design premiado</h3><p>Interface colorida, lúdica e muito bem animada.</p></div>
-              <div class="card purple step"><span class="ico">💻</span><h3>Também no navegador</h3><p>A versão web (duolingo.com) — a que vamos testar.</p></div>
+              <div class="card purple step"><span class="ico">⭐</span><h3>Líder em educação</h3><p>App de educação mais baixado do mundo e empresa aberta na NASDAQ.</p></div>
             </div>
-            <img class="float" src="images/Header.gif" alt="Personagens do Duolingo" style="width:100%">
+            <img src="images/duo-desktop.png" alt="Duo de óculos em frente a um laptop do Duolingo" style="width:100%">
           </div>
         </div>
         <div class="corner-num">02</div>
@@ -314,22 +277,22 @@
            com ressalva  → <div class="check-head is-warn"> ... <span class="status warn"><span class="ico">!</span> Passou com ressalva</span> -->
       <section class="slide" data-title="Checklist 1 · Título da página">
         <div class="ob-stage">
-          <div class="check-head is-pass">
+          <div class="check-head is-fail">
             <span class="check-num">1</span>
             <h2 class="title">Título da página</h2>
-            <span class="status pass"><span class="ico">✓</span> Passou</span>
+            <span class="status fail"><span class="ico">✕</span> Não passou</span>
           </div>
           <div class="check-body">
             <div class="check-text">
               <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
-                <div class="bubble">Item 1 do checklist manual: a página tem um <strong>título</strong> que faz sentido? 🏷️</div></div>
+                <div class="bubble">O título muda quando você troca de tela? No Duolingo… <span class="crit">não muda nunca</span>. 🏷️</div></div>
               <div style="margin-top:2px"><span class="tag wcag">WCAG 2.4.2</span><span class="tag A">Nível A</span></div>
               <div class="kv">
-                <div class="k">📋 O que se avalia</div><div class="v">Cada página tem um <code>&lt;title&gt;</code> descritivo e único, que identifica o conteúdo e aparece na aba do navegador.</div>
-                <div class="k">🔎 Observação</div><div class="v">[ inserir aqui o que vocês acharam no teste manual ]</div>
+                <div class="k">🔎 Problema</div><div class="v">A <code>&lt;title&gt;</code> fica <strong>estática</strong> com o slogan da marca em toda a SPA. Indo do painel pra Ligas ou Loja, o leitor de tela <strong>não anuncia</strong> a mudança de contexto.</div>
+                <div class="k">🛠️ Correção</div><div class="v fix">Atualizar <code>document.title</code> a cada rota — ex.: <code>"Ligas | Duolingo"</code>.</div>
               </div>
             </div>
-            <div class="shot ph">[ print do teste aqui ]</div>
+            <div class="shot" style="background:#1b2b34; max-height:200px; padding:24px;"><img src="images/ev-01-titulo.png" alt="Aba do navegador mostrando título estático: Duolingo - O jeito de aprender mais popular do mundo" style="width:auto; max-width:100%;"></div>
           </div>
         </div>
         <div class="corner-num">07</div>
@@ -609,14 +572,13 @@
 
       <!-- ===== Chrome de onboarding ===== -->
       <div class="ob-chrome">
-        <button class="ob-back" id="ob-back" aria-label="Voltar">‹</button>
         <div class="ob-bar"><div class="ob-fill" id="ob-fill"></div></div>
-        <span class="ob-gems">💎 <span id="ob-gemnum">0</span></span>
       </div>
       <div class="ob-cta" id="ob-cta-wrap">
+        <button class="foot-back" id="ob-back" aria-label="Voltar">‹ Voltar</button>
+        <span class="foot-count" id="counter">1 / 26</span>
         <button class="duo-btn" id="ob-cta">CONTINUAR</button>
       </div>
-      <div id="counter">1 / 24</div>
       <button class="toc-toggle" id="toc-toggle" aria-label="Sumário">☰</button>
       <aside class="toc-panel" id="toc-panel"><h4>Passos</h4><ul class="toc-list" id="toc-list"></ul></aside>
 

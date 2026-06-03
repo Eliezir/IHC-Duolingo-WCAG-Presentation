@@ -23,11 +23,15 @@ html,body{ height:100%; background:#0d1418;
 /* ============================================================
    Chrome de onboarding (topo fixo + botão CONTINUAR)
    ============================================================ */
-.ob-chrome{ position:absolute; top:0; left:0; right:0; height:74px; display:flex; align-items:center; gap:18px; padding:0 34px; z-index:40; }
-.ob-back{ width:38px; height:38px; border:none; background:transparent; color:var(--hare); font-size:34px; font-weight:900; cursor:pointer; line-height:0; }
-.ob-back{ transition:color .12s, transform .08s; }
-.ob-back:hover:not(:disabled){ color:var(--eel); transform:translateX(-2px); }
-.ob-back:disabled{ opacity:.25; cursor:default; }
+.ob-chrome{ position:absolute; top:0; left:0; right:0; height:74px; display:flex; align-items:center; gap:18px; padding:0 72px 0 34px; z-index:40; }
+/* botão Voltar do rodapé */
+.foot-back{ display:inline-flex; align-items:center; gap:4px; background:transparent; border:2px solid var(--swan); border-bottom-width:4px;
+  color:var(--wolf); font-weight:800; font-size:15px; font-family:inherit; padding:11px 22px; border-radius:14px; cursor:pointer;
+  transition:background .12s, color .12s, transform .08s; }
+.foot-back:hover:not(:disabled){ background:var(--polar); color:var(--eel); }
+.foot-back:active{ transform:translateY(2px); }
+.foot-back:disabled{ opacity:.4; cursor:default; }
+.foot-back:focus-visible{ outline:3px solid var(--jeans); outline-offset:2px; }
 .ob-bar{ flex:1; height:18px; background:var(--swan); border-radius:999px; position:relative; }
 .ob-fill{ height:100%; width:0; background:var(--feather); border-radius:999px; transition:width .45s cubic-bezier(.34,1.4,.64,1); position:relative; }
 .ob-fill::after{ content:""; position:absolute; top:3px; left:8px; right:8px; height:5px; background:rgba(255,255,255,.5); border-radius:999px; }
@@ -35,7 +39,8 @@ html,body{ height:100%; background:#0d1418;
 .ob-hearts{ display:inline-flex; gap:5px; font-size:22px; }
 
 .ob-cta{ position:absolute; left:0; right:0; bottom:0; padding:18px 34px 26px; z-index:40;
-  border-top:2px solid var(--swan); background:#fff; display:flex; justify-content:flex-end; }
+  border-top:2px solid var(--swan); background:#fff; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+.foot-count{ font-weight:800; font-size:14px; color:var(--hare); letter-spacing:.5px; }
 .duo-btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px;
   background:var(--feather); color:#fff; font-weight:800; font-size:18px; text-transform:uppercase; letter-spacing:1px;
   padding:16px 30px; border:none; border-radius:var(--r-md); box-shadow:0 5px 0 var(--green-dk); cursor:pointer; min-width:240px;
@@ -52,8 +57,7 @@ html,body{ height:100%; background:#0d1418;
   padding:104px 64px 116px; opacity:0; overflow:hidden; }
 .slide.active{ display:flex; animation:slideIn .35s ease both; }
 @keyframes slideIn{ from{opacity:0; transform:translateX(28px);} to{opacity:1; transform:none;} }
-.corner-num{ position:absolute; right:20px; bottom:104px; font-weight:800; font-size:13px; color:var(--hare); z-index:30; }
-.slide.intro .corner-num, .slide.cover .corner-num, .slide.splash .corner-num, .slide.trail-slide .corner-num{ display:none; }
+.corner-num{ display:none; }
 
 /* fala do Duo (mascote + balão) */
 .ob-speak{ display:flex; align-items:flex-end; gap:24px; }
@@ -182,8 +186,7 @@ table.map td:first-child{ font-weight:900; }
 /* ============================================================
    Navegação auxiliar (sumário + contador)
    ============================================================ */
-#counter{ position:absolute; left:20px; bottom:104px; font-weight:800; font-size:12px; color:var(--hare); z-index:30; }
-.splash-mode #counter{ display:none; }
+#counter{ font-weight:800; font-size:14px; color:var(--hare); letter-spacing:.5px; }
 .toc-toggle{ position:absolute; top:18px; right:18px; z-index:60; width:40px; height:40px; border-radius:12px; border:none; background:#fff; color:var(--eel); font-size:19px; cursor:pointer; box-shadow:0 2px 0 var(--swan); transition:filter .12s, transform .08s; }
 .toc-toggle:hover{ filter:brightness(.96); transform:translateY(-1px); }
 .toc-panel{ position:absolute; top:0; right:0; width:340px; height:100%; background:#fff; z-index:70; box-shadow:-8px 0 30px rgba(0,0,0,.2); transform:translateX(110%); transition:transform .3s ease; padding:64px 14px 20px; overflow-y:auto; }
