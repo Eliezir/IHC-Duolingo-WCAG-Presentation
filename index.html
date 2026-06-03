@@ -388,20 +388,29 @@
         <div class="corner-num">08</div>
       </section>
 
-      <!-- 09 — CONTRASTE -->
-      <section class="slide" data-title="Contraste baixo">
+      <!-- CHECKLIST MANUAL · 04 — CONTRASTE DE CORES -->
+      <section class="slide" data-title="Checklist 4 · Contraste de cores">
         <div class="ob-stage">
-          <div class="problem">
-            <div>
+          <div class="check-head is-fail">
+            <span class="check-num">4</span>
+            <h2 class="title">Contraste de cores</h2>
+            <span class="status fail"><span class="ico">✕</span> Não passou</span>
+          </div>
+          <div class="check-body">
+            <div class="check-text">
               <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_ball.gif" alt="Duo"></div>
-                <div class="bubble">20 textos com contraste fraco. Boa sorte lendo isso no sol. ☀️</div></div>
-              <div style="margin-top:12px"><span class="tag wcag">WCAG 1.4.3</span><span class="tag AA">Nível AA</span><span class="tag n">20×</span></div>
+                <div class="bubble">Texto que some no fundo? Tem bastante — no claro <span class="crit">e</span> no escuro. ☀️🌙</div></div>
+              <div style="margin-top:2px"><span class="tag wcag">WCAG 1.4.3</span><span class="tag AA">Nível AA</span><span class="tag n">21🌙 · 36☀️</span></div>
               <div class="kv">
-                <div class="k">💥 Impacto</div><div class="v">Não atinge 4,5:1 (texto normal). Prejudica baixa visão e daltonismo.</div>
-                <div class="k">🛠️ Correção</div><div class="v fix">Revisar cores priorizando contraste ≥ 4,5:1.</div>
+                <div class="k">🔎 Problema</div><div class="v">O mínimo de <strong>4,5:1</strong> é quebrado em escala: <strong>21 erros no modo escuro</strong> e <strong>36 no claro</strong>. Ex.: cinza <code>#AFAFAF</code> no branco dá só <strong>2,19:1</strong>. Prejudica baixa visão e quem usa sob luz forte.</div>
+                <div class="k">🛠️ Correção</div><div class="v fix">Revisar as cores pra atingir <strong>≥ 4,5:1</strong> — conferir no WebAIM Contrast Checker.</div>
               </div>
             </div>
-            <div class="shot"><img src="images/wave-contraste.png" alt="Painel de contraste do WAVE com razão 2,75:1"></div>
+            <div class="complaints stack ev">
+              <div class="complaint"><img src="images/ev-04-checker.png" alt="WebAIM Contrast Checker: cinza #AFAFAF sobre branco resulta em razão 2,19:1, reprovado em AA e AAA"></div>
+              <div class="complaint"><img src="images/ev-04-contrast-page.png" alt="Tela do Duolingo com erros de contraste apontados pelo WAVE em vários elementos"></div>
+              <span class="deck-badge" aria-hidden="true">🔍 2</span>
+            </div>
           </div>
         </div>
         <div class="corner-num">09</div>
@@ -579,33 +588,168 @@
         <div class="corner-num">15</div>
       </section>
 
-      <!-- DEMO — LEITOR DE TELA NO CELULAR -->
-      <!-- EDITAR: quando tiver o vídeo, troque o bloco .video-ph por:
-           <video class="screen-vid" src="images/leitor-celular.mp4" controls playsinline></video> -->
-      <section class="slide" data-title="Leitor de tela no celular">
-        <div class="ob-stage top">
-          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_potion.gif" alt="Duo"></div>
-            <div class="bubble">Chega de teoria. Olha como é <strong>de verdade</strong> usar o Duolingo com um <strong>leitor de tela</strong> no celular. 🎧</div></div>
-          <div class="demo">
-            <div>
-              <ul class="duo-list">
-                <li class="step"><span class="bullet">▶</span> Um colega do grupo navega com o <strong>VoiceOver</strong> ligado.</li>
-                <li class="warn step"><span class="bullet">!</span> Repare nos <strong>“botão… botão… imagem”</strong> sem descrição.</li>
-                <li class="warn step"><span class="bullet">!</span> E na dificuldade de saber <strong>onde está</strong> e o que foi <strong>acertado</strong>.</li>
-                <li class="step"><span class="bullet">→</span> É o mesmo que o WAVE apontou — agora <strong>vivido</strong>.</li>
-              </ul>
-            </div>
-            <div class="phone">
-              <div class="screen">
-                <div class="video-ph">
-                  <span class="play">▶</span>
-                  <span class="lbl">Vídeo: navegação com leitor de tela</span>
-                  <span class="sub">(gravação de tela — a inserir)</span>
-                </div>
-              </div>
-            </div>
+      <!-- DEMO — LEITOR DE TELA NO CELULAR (vídeo em tela cheia + erros que passam ao lado) -->
+      <!-- USO: dê PLAY no vídeo (centro). Use → / espaço para PASSAR os 5 erros (o vídeo continua tocando);
+           ← volta um erro. Cada erro é um .step; o engine só revela o texto, não mexe no vídeo. -->
+      <section class="slide vd-demo" data-title="Leitor de tela no celular" data-cta="">
+        <style>
+          /* imersivo: esconde a barra de progresso e o menu enquanto este slide estiver ativo */
+          #scaler:has(.vd-demo.active) .ob-chrome,
+          #scaler:has(.vd-demo.active) .toc-toggle{ display:none !important; }
+
+          .slide.vd-demo{ background:#0b1116; padding:0; overflow:hidden; }
+          .vd-demo .vd-eyebrow{ position:absolute; top:16px; left:0; right:0; text-align:center; z-index:6;
+            font-size:13px; font-weight:900; letter-spacing:1.8px; text-transform:uppercase; color:#7fd0ff; }
+
+          .vd-demo .vd-frame{ position:absolute; top:62px; left:50%; transform:translateX(-50%);
+            width:338px; height:600px; border-radius:30px; overflow:hidden; background:#000;
+            border:7px solid #1b2730; box-shadow:0 20px 55px rgba(0,0,0,.6); z-index:2; }
+          .vd-demo .vd-frame video{ width:100%; height:100%; object-fit:cover; display:block; background:#000; }
+
+          .vd-demo .vd-hint{ position:absolute; bottom:14px; left:50%; transform:translateX(-50%); z-index:6;
+            font-size:12.5px; font-weight:800; color:#9fb2bd; background:rgba(0,0,0,.35); padding:6px 15px; border-radius:999px; }
+
+          /* cada erro = um overlay .step; centro transparente (vídeo passa), painéis opacos nas laterais */
+          .vd-demo .vd-issue{ position:absolute; inset:0; z-index:4; pointer-events:none; }
+          .vd-demo .vd-issue.step.show{ animation:none; opacity:1; }   /* cancela o popBounce padrão */
+          .vd-demo .vd-panel{ position:absolute; top:72px; height:566px; width:398px; box-sizing:border-box;
+            background:rgba(14,22,29,.95); border:2px solid rgba(255,255,255,.10); border-radius:20px;
+            padding:22px 22px 20px; color:#eef3f6; display:flex; flex-direction:column; gap:13px;
+            opacity:0; transition:opacity .42s ease, transform .42s cubic-bezier(.34,1.4,.64,1); }
+          .vd-demo .vd-left{ left:28px;  transform:translateX(-30px); }
+          .vd-demo .vd-right{ right:28px; transform:translateX(30px); }
+          .vd-demo .vd-issue.show .vd-panel{ opacity:1; transform:translateX(0); }
+
+          .vd-demo .vd-top{ display:flex; align-items:center; justify-content:space-between; }
+          .vd-demo .vd-num{ font-size:13px; font-weight:900; letter-spacing:1.4px; text-transform:uppercase; color:#7fd0ff; }
+          .vd-demo .vd-lvl{ font-weight:900; font-size:12.5px; padding:5px 13px; border-radius:999px; color:#fff; white-space:nowrap; }
+          .vd-demo .vd-lvl.a{ background:#FF4B4B; }
+          .vd-demo .vd-lvl.aa{ background:#FF9600; }
+          .vd-demo .vd-lvl.aaa{ background:#1CB0F6; }
+          .vd-demo .vd-title{ font-size:22px; font-weight:900; line-height:1.18; color:#fff; }
+          .vd-demo .vd-desc{ font-size:14.5px; line-height:1.5; font-weight:600; color:#ccd8df; }
+
+          .vd-demo .vd-rhead{ font-size:11.5px; font-weight:900; letter-spacing:1.6px; text-transform:uppercase; color:#7f8c95; }
+          .vd-demo .vd-row .vd-k{ display:block; font-size:11px; font-weight:900; letter-spacing:1.2px; text-transform:uppercase; color:#7f8c95; margin-bottom:3px; }
+          .vd-demo .vd-row .vd-v{ font-size:14.5px; font-weight:800; color:#eef3f6; line-height:1.38; }
+          .vd-demo .vd-row + .vd-row{ margin-top:13px; }
+          .vd-demo .vd-prin{ display:flex; flex-wrap:wrap; gap:6px; }
+          .vd-demo .vd-prin span{ font-size:12.5px; font-weight:900; padding:3px 10px; border-radius:999px; background:rgba(127,208,255,.14); color:#a9def9; }
+          .vd-demo .corner-num{ display:none; }
+
+          .vd-demo .vd-skip{ position:absolute; bottom:14px; right:24px; z-index:7; cursor:pointer;
+            font-family:inherit; font-size:13px; font-weight:900; letter-spacing:.4px; color:#cdd8df;
+            background:rgba(255,255,255,.08); border:2px solid rgba(255,255,255,.16); border-radius:999px;
+            padding:8px 16px; transition:background .14s ease, color .14s ease, transform .08s ease; }
+          .vd-demo .vd-skip:hover{ background:rgba(255,255,255,.16); color:#fff; }
+          .vd-demo .vd-skip:active{ transform:translateY(1px); }
+        </style>
+
+        <div class="vd-eyebrow" aria-hidden="true">🎧 Leitor de tela na prática · VoiceOver no Duolingo</div>
+
+        <div class="vd-frame">
+          <video src="images/leitor-celular.mp4" controls playsinline preload="metadata"
+                 aria-label="Gravação de tela: navegação no Duolingo com leitor de tela VoiceOver"></video>
+        </div>
+
+        <!-- ERRO 1 -->
+        <div class="vd-issue step">
+          <div class="vd-panel vd-left">
+            <div class="vd-top"><span class="vd-num">Erro 1 / 5</span><span class="vd-lvl aaa">Nível AAA</span></div>
+            <div class="vd-title">Leitura superficial e sem contexto</div>
+            <p class="vd-desc">O leitor lê a barra de status de forma estruturada (“aba de ofensivas, 0, botão…”), mas a descrição é <strong>rasa e ambígua</strong>. Termos isolados como <em>“ofensiva”</em>, <em>“cristais”</em> e <em>“energia”</em> se confundem e geram dúvida na navegação de quem não enxerga.</p>
+          </div>
+          <div class="vd-panel vd-right">
+            <div class="vd-rhead">Classificação · WCAG 2.1</div>
+            <div class="vd-row"><span class="vd-k">Princípio</span><div class="vd-prin"><span>Compreensível</span></div></div>
+            <div class="vd-row"><span class="vd-k">Diretriz</span><span class="vd-v">3.1 — Conteúdo legível e compreensível</span></div>
+            <div class="vd-row"><span class="vd-k">Critério</span><span class="vd-v">3.1.3 — Palavras Incomuns</span></div>
+            <div class="vd-row"><span class="vd-k">Por quê</span><span class="vd-v">O vocabulário precisa ser claro ou contextualizado para evitar barreiras cognitivas.</span></div>
           </div>
         </div>
+
+        <!-- ERRO 2 -->
+        <div class="vd-issue step">
+          <div class="vd-panel vd-left">
+            <div class="vd-top"><span class="vd-num">Erro 2 / 5</span><span class="vd-lvl a">Nível A</span></div>
+            <div class="vd-title">Sequências sem nomenclatura</div>
+            <p class="vd-desc">Botões e <code>div</code>s anunciados só como <strong>“botão”</strong> ou “ligação para fulano”, sem dizer o objetivo. E a ordem do foco quebra: surgem termos como <em>“níveis 5, 10”</em> soltos na tela, sem relação com os botões anteriores.</p>
+          </div>
+          <div class="vd-panel vd-right">
+            <div class="vd-rhead">Classificação · WCAG 2.1</div>
+            <div class="vd-row"><span class="vd-k">Princípio</span><div class="vd-prin"><span>Perceptível</span><span>Operável</span></div></div>
+            <div class="vd-row"><span class="vd-k">Diretriz</span><span class="vd-v">1.3 — Adaptável · 2.4 — Navegável</span></div>
+            <div class="vd-row"><span class="vd-k">Critério</span><span class="vd-v">1.3.1 — Informações e Relações<br>2.4.3 — Ordem do Foco</span></div>
+            <div class="vd-row"><span class="vd-k">Por quê</span><span class="vd-v">Bloqueio grave: sem rótulos e com ordem quebrada, a navegação linear lógica é impossível.</span></div>
+          </div>
+        </div>
+
+        <!-- ERRO 3 -->
+        <div class="vd-issue step">
+          <div class="vd-panel vd-left">
+            <div class="vd-top"><span class="vd-num">Erro 3 / 5</span><span class="vd-lvl aa">Nível AA</span></div>
+            <div class="vd-title">Transcrição em idioma desconhecido</div>
+            <p class="vd-desc">Durante uma atividade, o idioma do conteúdo <strong>mudou de repente</strong> para uma língua diferente da escolhida no cadastro (Português). O usuário não sabia se aquilo fazia parte da atividade ou se era um bug.</p>
+          </div>
+          <div class="vd-panel vd-right">
+            <div class="vd-rhead">Classificação · WCAG 2.1</div>
+            <div class="vd-row"><span class="vd-k">Princípio</span><div class="vd-prin"><span>Compreensível</span></div></div>
+            <div class="vd-row"><span class="vd-k">Diretriz</span><span class="vd-v">3.1 — Conteúdo legível e compreensível</span></div>
+            <div class="vd-row"><span class="vd-k">Critério</span><span class="vd-v">3.1.2 — Idioma de Partes</span></div>
+            <div class="vd-row"><span class="vd-k">Por quê</span><span class="vd-v">A mudança de idioma não foi marcada no código, então o leitor não pronuncia corretamente.</span></div>
+          </div>
+        </div>
+
+        <!-- ERRO 4 -->
+        <div class="vd-issue step">
+          <div class="vd-panel vd-left">
+            <div class="vd-top"><span class="vd-num">Erro 4 / 5</span><span class="vd-lvl a">Nível A</span></div>
+            <div class="vd-title">Caixa de seleção só clicável “em cima”</div>
+            <p class="vd-desc">Ao tentar avançar, o leitor <strong>pulava as opções</strong> e ia direto pro fim da página. Só foi possível marcar clicando fisicamente na tela, às cegas. Um usuário cego ficaria <strong>completamente bloqueado</strong> — o elemento não é alcançável pelos gestos do leitor.</p>
+          </div>
+          <div class="vd-panel vd-right">
+            <div class="vd-rhead">Classificação · WCAG 2.1</div>
+            <div class="vd-row"><span class="vd-k">Princípio</span><div class="vd-prin"><span>Operável</span><span>Perceptível</span></div></div>
+            <div class="vd-row"><span class="vd-k">Diretriz</span><span class="vd-v">2.1 — Acessível por teclado/gestos · 1.3 — Adaptável</span></div>
+            <div class="vd-row"><span class="vd-k">Critério</span><span class="vd-v">2.1.1 — Teclado / Gestos<br>1.3.2 — Sequência Significativa</span></div>
+            <div class="vd-row"><span class="vd-k">Por quê</span><span class="vd-v">Erro crítico: se o leitor não alcança o elemento, a função é “inexistente” para o usuário cego.</span></div>
+          </div>
+        </div>
+
+        <!-- ERRO 5 -->
+        <div class="vd-issue step">
+          <div class="vd-panel vd-left">
+            <div class="vd-top"><span class="vd-num">Erro 5 / 5</span><span class="vd-lvl a">Nível A</span></div>
+            <div class="vd-title">Funções sem descrição e sem status</div>
+            <p class="vd-desc">O leitor não lê o texto do elemento — anuncia apenas <strong>“botão”</strong>. E quando o usuário enfim seleciona uma opção, a interface <strong>avança sozinha</strong> sem dizer qual foi marcada: zero feedback de confirmação.</p>
+          </div>
+          <div class="vd-panel vd-right">
+            <div class="vd-rhead">Classificação · WCAG 2.1</div>
+            <div class="vd-row"><span class="vd-k">Princípio</span><div class="vd-prin"><span>Perceptível</span><span>Compreensível</span><span>Robusto</span></div></div>
+            <div class="vd-row"><span class="vd-k">Diretriz</span><span class="vd-v">1.1 — Alternativas textuais · 3.2 — Previsível · 4.1 — Compatível</span></div>
+            <div class="vd-row"><span class="vd-k">Critério</span><span class="vd-v">1.1.1 — Conteúdo Não Textual · 3.2.2 — Ao Inserir Dados · 4.1.2 — Nome, Função, Valor</span></div>
+            <div class="vd-row"><span class="vd-k">Por quê</span><span class="vd-v">Erro crítico: botões sem nome e sem anúncio de “selecionado/não selecionado”.</span></div>
+          </div>
+        </div>
+
+        <div class="vd-hint" aria-hidden="true">▶ dê play · use <strong>→</strong> para passar os 5 erros (o vídeo continua tocando) · <strong>←</strong> volta</div>
+        <button class="vd-skip" type="button">Pular demonstração ⏭</button>
+        <!-- Pular: dispara → até sair do slide (sem overshoot) e pausa o vídeo. Não depende do engine.js. -->
+        <script>
+        (function(){
+          var sec = document.currentScript.closest('.vd-demo');
+          var btn = sec.querySelector('.vd-skip');
+          btn.addEventListener('click', function(e){
+            e.preventDefault();
+            var guard = 0;
+            while (sec.classList.contains('active') && guard < 12){
+              window.dispatchEvent(new KeyboardEvent('keydown', { key:'ArrowRight', bubbles:true }));
+              guard++;
+            }
+            var v = sec.querySelector('video'); if (v && !v.paused) v.pause();
+          });
+        })();
+        </script>
         <div class="corner-num">22</div>
       </section>
 

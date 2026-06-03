@@ -617,5 +617,13 @@ table.map td:first-child{ font-weight:900; }
   100%{ top:23.5%; transform:scale(1); }
 }
 
+/* deck de evidência (2 cards) dentro do checklist */
+.complaints.stack.ev{ width:480px; max-width:100%; height:284px; margin:0 auto; }
+.complaints.stack.ev .complaint{ width:430px; height:252px; }
+.complaints.stack.ev .complaint:nth-child(1){ transform:translate(28px,24px) scale(.94); z-index:1; }
+.complaints.stack.ev .complaint:nth-child(2){ transform:none; z-index:2; box-shadow:0 16px 38px rgba(0,0,0,.24); }
+.complaints.stack.ev:hover .complaint:nth-child(2){ transform:translateY(-7px) scale(1.015); }
+.complaints.stack.ev .deck-badge{ left:auto; right:6px; top:-10px; }
+
 /* foco visível no botão — acessibilidade da própria apresentação */
 .duo-btn:focus-visible{ outline:4px solid #1899D6; outline-offset:3px; }
