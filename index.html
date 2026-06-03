@@ -314,10 +314,54 @@
                 <div class="k">🛠️ Correção</div><div class="v fix">Atualizar <code>document.title</code> a cada rota — ex.: <code>"Ligas | Duolingo"</code>.</div>
               </div>
             </div>
-            <div class="shot" style="background:#1b2b34; max-height:200px; padding:24px;"><img src="images/ev-01-titulo.png" alt="Aba do navegador mostrando título estático: Duolingo - O jeito de aprender mais popular do mundo" style="width:auto; max-width:100%;"></div>
+            <div>
+              <div class="title-demo" id="title-demo">
+                <div class="title-browser" role="img" aria-label="Navegando entre Ligas e Perfil no Duolingo; a aba do navegador mostra sempre o mesmo título 'Duolingo - O jeito de aprender mais popular do mundo'">
+                  <div class="browser-tabs">
+                    <div class="b-tab"><img class="b-fav" src="images/duolingo-favicon.png" alt=""><span class="b-tab-title">Duolingo - O jeito de aprender mais popular do mundo</span><span class="b-x">✕</span></div>
+                    <span class="b-newtab">+</span>
+                  </div>
+                  <div class="browser-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                    <span class="browser-url"><span class="url-swap"><span class="u u-l">🔒 duolingo.com/leagues</span><span class="u u-p">🔒 duolingo.com/profile/EmPn9</span></span></span>
+                  </div>
+                  <div class="tb-page2">
+                    <img class="pg pg-leagues" src="images/ui-leagues.png" alt="">
+                    <img class="pg pg-profile" src="images/ui-profile.png" alt="">
+                    <span class="tb-cursor2"><svg viewBox="0 0 24 24"><path d="M4 2 L4 19 L8.5 14.6 L11.8 21.5 L14.3 20.4 L11 13.7 L17.3 13.7 Z" fill="#1a1a1a" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+                  </div>
+                </div>
+                <button class="demo-play" id="demo-play" aria-label="Ver em tela cheia"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg></button>
+              </div>
+              <p class="muted" style="font-weight:800; font-size:13px; text-align:center; margin-top:10px;">⛶ Abra em <strong>tela cheia</strong>: a URL muda, mas a <strong style="color:var(--cardinal)">aba nunca muda</strong>.</p>
+            </div>
           </div>
         </div>
         <div class="corner-num">07</div>
+      </section>
+
+      <!-- CHECKLIST MANUAL · 02 — ALTERNATIVAS DE CONTEÚDO -->
+      <section class="slide" data-title="Checklist 2 · Alternativas de conteúdo">
+        <div class="ob-stage">
+          <div class="check-head is-fail">
+            <span class="check-num">2</span>
+            <h2 class="title">Alternativas de conteúdo</h2>
+            <span class="status fail"><span class="ico">✕</span> Não passou</span>
+          </div>
+          <div class="check-body">
+            <div class="check-text">
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
+                <div class="bubble">As imagens "falam" pra quem usa leitor de tela? No Duolingo, dezenas ficam <span class="crit">mudas</span>. 🔇</div></div>
+              <div style="margin-top:2px"><span class="tag wcag">WCAG 1.1.1</span><span class="tag A">Nível A</span><span class="tag n">28×</span></div>
+              <div class="kv">
+                <div class="k">🔎 Problema</div><div class="v">O WAVE achou <strong>28 elementos de mídia sem <code>alt</code></strong> na tela principal. Comemorações e ícones do Duo são <strong>ignorados</strong> (ou lidos de forma tosca) — o conteúdo gamificado fica invisível pra quem é cego.</div>
+                <div class="k">🛠️ Correção</div><div class="v fix">Dar <code>alt</code> descritivo a cada imagem informativa — ex.: <code>&lt;img alt="Duo comemorando o acerto"&gt;</code>.</div>
+              </div>
+              <p class="muted" style="font-weight:800; font-size:13px; margin-top:2px;">🎥 No fim, um <strong>vídeo de um usuário cego</strong> mostra como isso atrapalha o uso no dia a dia.</p>
+            </div>
+            <div class="shot"><img src="images/ev-02-alt.png" alt="Tela do Duolingo analisada pelo WAVE: praticamente toda imagem aparece com erro de texto alternativo ausente (ícones vermelhos por toda parte)"></div>
+          </div>
+        </div>
+        <div class="corner-num">08</div>
       </section>
 
       <!-- 07 — RESULTADO / SCORE -->
@@ -345,25 +389,6 @@
           </div>
         </div>
         <div class="corner-num">07</div>
-      </section>
-
-      <!-- 08 — IMAGENS SEM ALT -->
-      <section class="slide" data-title="Imagens sem alt">
-        <div class="ob-stage">
-          <div class="problem">
-            <div>
-              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
-                <div class="bubble">43 imagens sem <strong>alt</strong>. Pra quem usa leitor de tela, o conteúdo fica <span class="crit">invisível</span>. 🫥</div></div>
-              <div style="margin-top:12px"><span class="tag crit">CRÍTICO</span><span class="tag wcag">WCAG 1.1.1</span><span class="tag A">Nível A</span><span class="tag n">43×</span></div>
-              <div class="kv">
-                <div class="k">💥 Impacto</div><div class="v">Leitores de tela não descrevem o conteúdo — boa parte da página fica inacessível.</div>
-                <div class="k">🛠️ Correção</div><div class="v fix">alt descritivo nas informativas; <code>alt=""</code> nas decorativas.</div>
-              </div>
-            </div>
-            <div class="shot"><img src="images/home-overview.png" alt="Tela inicial do Duolingo com ícones de erro do WAVE"></div>
-          </div>
-        </div>
-        <div class="corner-num">08</div>
       </section>
 
       <!-- 09 — CONTRASTE -->
@@ -505,27 +530,53 @@
       <!-- 15 — RECOMENDAÇÕES (vídeos & artigos) -->
       <!-- EDITAR: troque os títulos/links pelos vídeos e artigos reais que vocês querem indicar -->
       <section class="slide" data-title="Recomendações">
+        <style>
+          .slide[data-title="Recomendações"] a[target="_blank"]{ transition:transform .15s ease, box-shadow .15s ease; }
+          .slide[data-title="Recomendações"] a[target="_blank"]:hover{ transform:translateY(-4px); box-shadow:0 12px 26px rgba(75,75,75,.16); }
+        </style>
         <div class="ob-stage top">
           <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_books.gif" alt="Duo"></div>
             <div class="bubble">Quer se aprofundar? Separamos <strong>vídeos e artigos</strong> sobre acessibilidade. 📚</div></div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:8px;">
-            <div>
-              <h4 class="col-h">📺 Vídeos</h4>
-              <ul class="rec-list">
-                <li><span class="r-ic">🎬</span><span><span class="r-tt">A11y Check — Duolingo com leitor de tela</span><span class="r-src">YouTube · [link]</span></span></li>
-                <li><span class="r-ic">🎬</span><span><span class="r-tt">6 things Duolingo could improve (a11y)</span><span class="r-src">YouTube · [link]</span></span></li>
-                <li><span class="r-ic">🎬</span><span><span class="r-tt">Como pessoas cegas usam o celular</span><span class="r-src">YouTube · [link]</span></span></li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="col-h">📄 Artigos &amp; padrões</h4>
-              <ul class="rec-list">
-                <li><span class="r-ic">📘</span><span><span class="r-tt">WCAG 2.1 (W3C)</span><span class="r-src">w3.org/TR/WCAG21</span></span></li>
-                <li><span class="r-ic">🌊</span><span><span class="r-tt">WebAIM — recursos de acessibilidade</span><span class="r-src">webaim.org</span></span></li>
-                <li><span class="r-ic">🇧🇷</span><span><span class="r-tt">eMAG — Governo Federal</span><span class="r-src">gov.br/governodigital · eMAG</span></span></li>
-                <li><span class="r-ic">💬</span><span><span class="r-tt">r/duolingo — "Not really accessible"</span><span class="r-src">reddit.com</span></span></li>
-              </ul>
-            </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:10px;">
+
+            <!-- CARD 1 · VÍDEO (Leonardo Gleison) -->
+            <a href="https://www.youtube.com/watch?v=vL3lyqQk6zM" target="_blank" rel="noopener" style="display:flex; flex-direction:column; background:#fff; border:2px solid var(--swan); border-bottom-width:6px; border-radius:20px; overflow:hidden; text-decoration:none; color:inherit;">
+              <div style="position:relative; height:184px; background:#000;">
+                <img src="images/rec-video-thumb.jpg" alt="Miniatura do vídeo de Leonardo Gleison avaliando a acessibilidade do Duolingo" style="width:100%; height:100%; object-fit:cover; display:block;">
+                <span aria-hidden="true" style="position:absolute; top:12px; left:12px; background:#FF0000; color:#fff; font-weight:900; font-size:12px; letter-spacing:.4px; padding:4px 9px; border-radius:7px;">▶ YouTube</span>
+                <span aria-hidden="true" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+                  <span style="width:62px; height:62px; border-radius:50%; background:rgba(255,75,75,.95); color:#fff; font-size:26px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,.35); padding-left:5px;">▶</span>
+                </span>
+              </div>
+              <div style="padding:16px 18px 18px;">
+                <span class="col-h" style="margin-bottom:8px;">🎬 Vídeo · em português</span>
+                <h3 style="font-size:18px; font-weight:900; color:var(--eel); line-height:1.25; margin:0 0 8px;">“O Duolingo é acessível para pessoas cegas?”</h3>
+                <p style="font-size:13.5px; font-weight:700; color:var(--hare); line-height:1.4; margin:0 0 12px;"><strong style="color:var(--jeans);">Leonardo Gleison</strong> — engenheiro de software e consultor em tecnologia assistiva, <strong>ele próprio uma pessoa com deficiência visual</strong>. Mostra na prática o que funciona e o que falha.</p>
+                <span style="display:inline-block; background:var(--cardinal); color:#fff; font-weight:900; font-size:13px; padding:8px 16px; border-radius:11px;">▶ Assistir no YouTube</span>
+              </div>
+            </a>
+
+            <!-- CARD 2 · ARTIGO (Wendy Li) -->
+            <a href="https://medium.com/@wndyli/reimagining-duolingo-a-non-visual-approach-to-language-learning-728e4e8733f9" target="_blank" rel="noopener" style="display:flex; flex-direction:column; background:#fff; border:2px solid var(--swan); border-bottom-width:6px; border-radius:20px; overflow:hidden; text-decoration:none; color:inherit;">
+              <div style="position:relative; height:184px; background:#F4F6F8;">
+                <img src="images/rec-article-cover.png" alt="Ilustração do artigo: o mascote Duo de óculos, da publicação no Medium" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+                <span aria-hidden="true" style="position:absolute; top:12px; left:12px; background:#000; color:#fff; font-weight:900; font-size:13px; padding:4px 11px; border-radius:7px;">𝐌 Medium</span>
+              </div>
+              <div style="padding:16px 18px 18px;">
+                <span class="col-h" style="margin-bottom:8px;">📝 Artigo · estudo de UX</span>
+                <h3 style="font-size:18px; font-weight:900; color:var(--eel); line-height:1.25; margin:0 0 8px;">“Reimagining Duolingo: A Non-visual Approach to Language Learning”</h3>
+                <p style="font-size:13.5px; font-weight:700; color:var(--hare); line-height:1.4; margin:0 0 12px;"><strong style="color:var(--jeans);">Wendy Li</strong> — percorre as barreiras de acessibilidade do Duolingo e <strong>propõe correções</strong>, repensando o app como experiência guiada por áudio.</p>
+                <span style="display:inline-block; background:var(--eel); color:#fff; font-weight:900; font-size:13px; padding:8px 16px; border-radius:11px;">📖 Ler no Medium</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Padrões de referência (secundário) -->
+          <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:16px; align-items:center;">
+            <span style="font-size:12px; font-weight:900; color:var(--hare); text-transform:uppercase; letter-spacing:1.2px;">Padrões &amp; referência:</span>
+            <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener" style="text-decoration:none; background:#fff; border:2px solid var(--swan); border-radius:999px; padding:5px 13px; font-size:12.5px; font-weight:800; color:var(--eel);">📘 WCAG 2.1 (W3C)</a>
+            <a href="https://webaim.org/" target="_blank" rel="noopener" style="text-decoration:none; background:#fff; border:2px solid var(--swan); border-radius:999px; padding:5px 13px; font-size:12.5px; font-weight:800; color:var(--eel);">🌊 WebAIM</a>
+            <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/emag" target="_blank" rel="noopener" style="text-decoration:none; background:#fff; border:2px solid var(--swan); border-radius:999px; padding:5px 13px; font-size:12.5px; font-weight:800; color:var(--eel);">🇧🇷 eMAG</a>
           </div>
         </div>
         <div class="corner-num">15</div>
@@ -620,5 +671,6 @@
 <script src="js/engine.js"></script>
 <script src="js/intro.js"></script>
 <script src="js/lightbox.js"></script>
+<script src="js/titledemo.js"></script>
 </body>
 </html>
