@@ -111,7 +111,7 @@
           <li style="--x:520px"><span class="tn2"><span class="ic">📐</span></span><span class="tn2-label">O que é a WCAG e como funciona</span></li>
           <li style="--x:560px"><span class="tn2"><span class="ic">🔎</span></span><span class="tn2-label">Como avaliamos · 3 frentes</span></li>
           <li style="--x:520px"><span class="tn2"><span class="ic">🐛</span></span><span class="tn2-label">Problemas no Duolingo desktop</span></li>
-          <li style="--x:430px"><span class="tn2"><span class="ic">💬</span></span><span class="tn2-label">O que dizem os usuários reais</span></li>
+          <li style="--x:430px"><span class="tn2"><span class="ic">📚</span></span><span class="tn2-label">Recomendações: vídeos e artigos</span></li>
           <li style="--x:360px"><span class="tn2"><span class="ic">🎧</span></span><span class="tn2-label">Leitor de tela na prática</span></li>
           <li style="--x:410px"><span class="tn2 gold"><span class="ic">🏆</span></span><span class="tn2-label">Conclusão &amp; perguntas</span></li>
         </ol>
@@ -122,7 +122,7 @@
       <section class="slide" data-title="O que é o Duolingo?">
         <div class="ob-stage top">
           <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
+            <div class="ob-duo sm"><img src="images/duo_ball.gif" alt="Duo"></div>
             <div class="bubble">Hoje a gente avalia o <strong>Duolingo</strong> — o app de idiomas mais usado do mundo. E o foco é a versão <strong>desktop</strong>. 🖥️</div>
           </div>
           <div style="display:flex; gap:10px; margin:-4px 0 2px;">
@@ -141,82 +141,98 @@
         <div class="corner-num">02</div>
       </section>
 
-      <!-- 03 — VOCÊ USA? -->
-      <section class="slide" data-title="Você usa?">
-        <div class="ob-stage top">
-          <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
-            <div class="bubble">Primeira pergunta pra vocês: <strong>usam o Duolingo?</strong> 👀</div>
-          </div>
-          <div class="ob-options">
-            <button class="ob-option"><span class="emoji">🔥</span><span>Uso todo dia<span class="sub">tenho uma ofensiva pra manter!</span></span></button>
-            <button class="ob-option"><span class="emoji">📅</span><span>Já usei<span class="sub">vai e volta…</span></span></button>
-            <button class="ob-option"><span class="emoji">🤔</span><span>Nunca usei<span class="sub">mas conheço o app</span></span></button>
+      <!-- 03 — UI/UX: DESIGN QUE ENCANTA (vitrine da interface) -->
+      <section class="slide" data-title="Design que encanta">
+        <div class="ob-stage">
+          <div style="display:grid; grid-template-columns:1.12fr .88fr; gap:42px; align-items:center;">
+            <div class="browser">
+              <div class="browser-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="browser-url">duolingo.com</span></div>
+              <div class="browser-shot"><img src="images/ui-duolingo.png" alt="Interface do Duolingo no desktop: trilha de lições, barra lateral e painel de ligas e missões"></div>
+            </div>
+            <div>
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_cheer.gif" alt="Duo"></div>
+                <div class="bubble">Pra <strong>maioria das pessoas</strong>, é lindo e <strong>intuitivo</strong> de usar. 🎨</div></div>
+              <ul class="duo-list" style="margin-top:16px">
+                <li><span class="bullet">🎨</span> Visual lúdico — cores, ilustrações e o Duo.</li>
+                <li><span class="bullet">✨</span> Microinterações e animações em cada toque.</li>
+                <li><span class="bullet">🎮</span> Gamificação que prende — XP, ofensiva e ligas.</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="corner-num">03</div>
       </section>
 
-      <!-- 04 — É BONITO / BEM FEITO? -->
-      <section class="slide" data-title="É bem desenhado?">
-        <div class="ob-stage top">
-          <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
-            <div class="bubble">E o design do Duolingo — vocês acham <strong>bonito e bem feito</strong>? 🎨</div>
-          </div>
-          <div class="ob-options">
-            <button class="ob-option"><span class="emoji">😍</span><span>Sim, lindo!<span class="sub">cores, animações, tudo no capricho</span></span></button>
-            <button class="ob-option"><span class="emoji">👍</span><span>É bem feito<span class="sub">design competente e divertido</span></span></button>
-            <button class="ob-option"><span class="emoji">🤷</span><span>Não é pra mim<span class="sub">mas reconheço o capricho</span></span></button>
+      <!-- 04 — A VIRADA: BONITO ≠ ACESSÍVEL (mesma tela, agora pelo WAVE) -->
+      <section class="slide" data-title="Bonito ≠ acessível" data-cta="BORA VER 👀">
+        <div class="ob-stage">
+          <div style="display:grid; grid-template-columns:1.12fr .88fr; gap:42px; align-items:center;">
+            <div class="browser">
+              <div class="browser-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="browser-url">duolingo.com</span></div>
+              <div class="browser-shot"><img src="images/ui-wave.png" alt="A mesma tela do Duolingo analisada pelo WAVE, coberta de ícones de erro de acessibilidade"></div>
+            </div>
+            <div>
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_exercise.gif" alt="Duo"></div>
+                <div class="bubble">Mas é só ligar o <strong>WAVE</strong>… e a <em>mesma</em> tela vira <span class="crit">isso</span>. 😵</div></div>
+              <h2 class="title" style="font-size:30px; margin-top:14px">Parece lindo — mas cheio de <span style="color:var(--cardinal)">barreiras de acessibilidade</span>.</h2>
+              <p class="subtitle" style="margin-top:12px">Cada ícone vermelho é um problema pra quem usa <strong>leitor de tela</strong>, <strong>teclado</strong> ou tem <strong>baixa visão</strong>. Foi isso que a gente foi medir.</p>
+            </div>
           </div>
         </div>
         <div class="corner-num">04</div>
-      </section>
-
-      <!-- 05 — A VIRADA -->
-      <section class="slide" data-title="O porém" data-cta="BORA VER 👀">
-        <div class="ob-stage">
-          <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
-            <div class="bubble">Pois é… o Duolingo é <strong>bonito e super bem pensado</strong>. Mas tem um <span class="crit">porém</span> que quase ninguém vê. 👇</div>
-          </div>
-          <div style="text-align:center; margin-top:4px">
-            <h1 class="title" style="font-size:48px">Lindo de ver —<br><span style="color:var(--cardinal)">difícil de usar</span> para quem tem deficiência.</h1>
-            <p class="subtitle" style="margin:16px auto 0; max-width:780px">Por trás da interface premiada existem <strong>dezenas de barreiras de acessibilidade</strong>. Vamos encontrá-las?</p>
-          </div>
-        </div>
-        <div class="corner-num">05</div>
       </section>
 
       <!-- 02 — QUEM DEPENDE -->
       <section class="slide" data-title="Quem depende?">
         <div class="ob-stage top">
           <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo com uma gema"></div>
-            <div class="bubble">Mas afinal, <strong>quem</strong> depende de acessibilidade pra usar o Duolingo?</div>
+            <div class="ob-duo sm"><img src="images/duo_butterfly.gif" alt="Duo"></div>
+            <div class="bubble">Uma <strong>busca rápida na internet</strong> e pronto: aparece <span class="crit">um monte de reclamação</span> de pessoas com deficiência sobre o Duolingo. 👇 <span style="font-weight:700; color:var(--wolf); font-size:15px">(clique pra ler)</span></div>
           </div>
-          <div class="ob-options cols2">
-            <button class="ob-option"><span class="emoji">👁️</span><span>Pessoas cegas<span class="sub">leitor de tela — VoiceOver, NVDA</span></span></button>
-            <button class="ob-option"><span class="emoji">🔍</span><span>Baixa visão<span class="sub">precisam de contraste e texto legível</span></span></button>
-            <button class="ob-option"><span class="emoji">👂</span><span>Surdos<span class="sub">dependem de alternativas ao áudio</span></span></button>
-            <button class="ob-option"><span class="emoji">♿</span><span>Deficiência motora<span class="sub">navegam por teclado, sem mouse</span></span></button>
+          <div class="stack-wrap">
+            <div class="complaints stack">
+              <div class="complaint"><img src="images/complaint-macular.png" alt="Comentário: não há como aumentar o texto no Duolingo e o fundo branco é doloroso com degeneração macular."></div>
+              <div class="complaint"><img src="images/complaint-pt.png" alt="Comentário em português: o app era acessível e virou uma perda para deficientes visuais; os desenvolvedores não ligam para acessibilidade."></div>
+              <div class="complaint"><img src="images/complaint-peripheral.png" alt="Comentário: usuária com perda de visão periférica diz que os exercícios cronometrados são impossíveis e pede uma configuração."></div>
+              <div class="complaint"><img src="images/complaint-cp.png" alt="Relato: usuário com paralisia cerebral não consegue escrever kanji à mão livre nas lições obrigatórias."></div>
+              <div class="complaint"><img src="images/complaint-reddit.png" alt="Post no Reddit r/duolingo intitulado 'Not really accessible': usuário com retinose pigmentar relata que não encontra opções de acessibilidade, leitor de tela nem fontes maiores."></div>
+              <span class="deck-badge" aria-hidden="true">📂 5</span>
+            </div>
           </div>
         </div>
-        <div class="corner-num">02</div>
+        <div class="corner-num">07</div>
+      </section>
+
+      <!-- O QUE É A WCAG (intro do padrão) -->
+      <section class="slide" data-title="O que é a WCAG?">
+        <div class="ob-stage">
+          <div class="ob-speak">
+            <div class="ob-duo sm"><img src="images/duo_books.gif" alt="Duo"></div>
+            <div class="bubble">Pra medir acessibilidade não dá pra ir no achismo — existe um <strong>padrão mundial</strong>. 📐</div>
+          </div>
+          <h1 class="title" style="font-size:32px; margin-top:6px">WCAG — <span style="color:var(--feather)">Web Content Accessibility Guidelines</span></h1>
+          <p class="lead" style="max-width:880px">Diretrizes do <strong>W3C</strong> que definem, de forma <strong>testável</strong>, o que um site precisa cumprir pra ser acessível a <strong>todas as pessoas</strong> — base de leis no mundo todo (e do <strong>eMAG</strong> no Brasil).</p>
+          <div class="wcag-tl">
+            <div class="tl"><span class="yr">1999</span><span class="v">WCAG 1.0</span><span class="d">o começo</span></div>
+            <div class="tl"><span class="yr">2008</span><span class="v">WCAG 2.0</span><span class="d">vira referência</span></div>
+            <div class="tl cur"><span class="yr">2018</span><span class="v">WCAG 2.1</span><span class="d">a que usamos</span></div>
+          </div>
+        </div>
+        <div class="corner-num">03</div>
       </section>
 
       <!-- 03 — WCAG PRINCÍPIOS -->
       <section class="slide" data-title="WCAG · princípios">
         <div class="ob-stage top">
           <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo estudando"></div>
-            <div class="bubble">As regras do jogo são a <strong>WCAG</strong> (W3C). Tudo se apoia em 4 princípios — <strong>P.O.C.R.</strong></div>
+            <div class="ob-duo sm"><img src="images/duo_books.gif" alt="Duo estudando"></div>
+            <div class="bubble">A WCAG se apoia em <strong>4 princípios</strong> — o famoso <strong>P.O.C.R.</strong> Todo critério cai em um deles. 🎮</div>
           </div>
-          <div class="grid c4">
-            <div class="card green step"><span class="ico">👁️</span><h3>Perceptível</h3><p>Texto alternativo, legendas, contraste e cor.</p></div>
-            <div class="card blue step"><span class="ico">⌨️</span><h3>Operável</h3><p>Teclado e tempo suficiente.</p></div>
-            <div class="card yellow step"><span class="ico">💡</span><h3>Compreensível</h3><p>Texto legível e previsível.</p></div>
-            <div class="card purple step"><span class="ico">🤖</span><h3>Robusto</h3><p>Compatível c/ tecnologia assistiva.</p></div>
+          <div class="grid c2">
+            <div class="card green"><span class="ico">👁️</span><h3><span class="poc">P</span>Perceptível</h3><p>O conteúdo precisa <strong>poder ser percebido</strong> — se você não vê ou não ouve, ainda assim recebe a informação.</p><p class="ex">alt em imagens · contraste suficiente · legendas · não depender só da cor</p></div>
+            <div class="card blue"><span class="ico">⌨️</span><h3><span class="poc">O</span>Operável</h3><p>Dá pra <strong>navegar e usar tudo</strong> por qualquer meio, não só pelo mouse.</p><p class="ex">acesso total por teclado · foco visível · tempo suficiente · sem armadilhas</p></div>
+            <div class="card yellow"><span class="ico">💡</span><h3><span class="poc">C</span>Compreensível</h3><p>Conteúdo e interface são <strong>claros e previsíveis</strong> — nada de surpresa.</p><p class="ex">idioma definido · rótulos claros · erros explicados · comportamento previsível</p></div>
+            <div class="card purple"><span class="ico">🤖</span><h3><span class="poc">R</span>Robusto</h3><p>Funciona com <strong>tecnologias assistivas</strong> (leitores de tela), hoje e no futuro.</p><p class="ex">HTML semântico · ARIA correto · compatível com leitores de tela</p></div>
           </div>
         </div>
         <div class="corner-num">03</div>
@@ -226,7 +242,7 @@
       <section class="slide" data-title="Níveis A / AA / AAA">
         <div class="ob-stage top">
           <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
+            <div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
             <div class="bubble">Três níveis de conformidade: <strong>A</strong>, <strong>AA</strong>, <strong>AAA</strong>. O mínimo do mundo real é <strong>A + AA</strong>.</div>
           </div>
           <div class="grid c3">
@@ -243,7 +259,7 @@
       <section class="slide" data-title="eMAG">
         <div class="ob-stage top">
           <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo-walking.png" alt="Duo"></div>
+            <div class="ob-duo sm"><img src="images/duo_ball.gif" alt="Duo"></div>
             <div class="bubble">No Brasil tem o <strong>eMAG</strong> 🇧🇷 — 45 recomendações em 6 seções, baseado na WCAG. Eu não sou <code>.gov</code>, mas serve de referência.</div>
           </div>
           <div class="grid c2">
@@ -258,7 +274,7 @@
       <section class="slide" data-title="Metodologia">
         <div class="ob-stage top">
           <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo testando"></div>
+            <div class="ob-duo sm"><img src="images/duo_potion.gif" alt="Duo testando"></div>
             <div class="bubble">Como a avaliação foi feita? <strong>Três frentes</strong> — e quando as três concordam, não tem desculpa.</div>
           </div>
           <div class="grid c3">
@@ -302,7 +318,7 @@
       <section class="slide" data-title="Resultado (3,3/10)" data-cta="VER OS PROBLEMAS">
         <div class="ob-stage">
           <div class="ob-speak">
-            <div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo desanimado"></div>
+            <div class="ob-duo sm"><img src="images/duo_exercise.gif" alt="Duo desanimado"></div>
             <div class="bubble">Resultado do WAVE no Duolingo… <span class="crit">3,3 de 10</span>. 😬 Vish.</div>
           </div>
           <div class="score-wrap">
@@ -349,7 +365,7 @@
         <div class="ob-stage">
           <div class="problem">
             <div>
-              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_ball.gif" alt="Duo"></div>
                 <div class="bubble">20 textos com contraste fraco. Boa sorte lendo isso no sol. ☀️</div></div>
               <div style="margin-top:12px"><span class="tag wcag">WCAG 1.4.3</span><span class="tag AA">Nível AA</span><span class="tag n">20×</span></div>
               <div class="kv">
@@ -368,7 +384,7 @@
         <div class="ob-stage">
           <div class="problem">
             <div>
-              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_potion.gif" alt="Duo"></div>
                 <div class="bubble">O botão de fechar a lição não tem rótulo. O leitor diz só “botão”. Aperta e… <span class="crit">perdeu o progresso</span>. 😬</div></div>
               <div style="margin-top:12px"><span class="tag crit">CRÍTICO</span><span class="tag wcag">3.3.2 · 4.1.2</span><span class="tag AA">Nível AA</span></div>
               <div class="kv">
@@ -407,7 +423,7 @@
         <div class="ob-stage">
           <div class="problem">
             <div>
-              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
                 <div class="bubble">Links repetidos e <strong>alt</strong> duplicado. eco… eco… eco. 🔁</div></div>
               <div style="margin-top:12px"><span class="tag wcag">2.4.4 · 1.1.1</span><span class="tag A">Nível A</span></div>
               <div class="kv">
@@ -426,7 +442,7 @@
         <div class="ob-stage">
           <div class="problem">
             <div>
-              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_exercise.gif" alt="Duo"></div>
                 <div class="bubble">24 “botões” que na verdade são <code>&lt;div&gt;</code>, e tabindex bagunçando o foco. 🤦</div></div>
               <div style="margin-top:12px"><span class="tag wcag">4.1.2 · 2.4.3</span><span class="tag A">Nível A</span><span class="tag n">24 + 24</span></div>
               <div class="kv">
@@ -443,7 +459,7 @@
       <!-- 13 — TRILHA -->
       <section class="slide" data-title="A trilha do Duolingo">
         <div class="ob-stage top">
-          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
+          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_butterfly.gif" alt="Duo"></div>
             <div class="bubble">A trilha é linda… mas cada ícone é uma imagem sem <strong>alt</strong> e cada nó é uma <code>div</code>. 🙈</div></div>
           <div style="display:grid; grid-template-columns:300px 1fr; gap:48px; align-items:center;">
             <div class="trilha">
@@ -480,30 +496,31 @@
         <div class="corner-num">14</div>
       </section>
 
-      <!-- 15 — VALIDAÇÃO EXTERNA -->
-      <section class="slide" data-title="O que dizem os usuários">
+      <!-- 15 — RECOMENDAÇÕES (vídeos & artigos) -->
+      <!-- EDITAR: troque os títulos/links pelos vídeos e artigos reais que vocês querem indicar -->
+      <section class="slide" data-title="Recomendações">
         <div class="ob-stage top">
-          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
-            <div class="bubble">Acha que é exagero? <strong>Usuários reais</strong> dizem o mesmo, em todo canto:</div></div>
-          <!-- EDITAR: trocar cada .media-ph por <img src="images/SEU-PRINT.png" alt="..."> quando tiver os recortes -->
-          <div class="media-grid">
-            <div class="media-card step">
-              <div class="src x">𝕏 · Twitter/X</div>
-              <div class="media-ph">[ print do tweet aqui ]</div>
-              <div class="cap"><span class="q">“Duolingo just doesn’t work with a screen reader.”</span><span class="who">usuária cega · 1.1.1</span></div>
+          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_books.gif" alt="Duo"></div>
+            <div class="bubble">Quer se aprofundar? Separamos <strong>vídeos e artigos</strong> sobre acessibilidade. 📚</div></div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:8px;">
+            <div>
+              <h4 class="col-h">📺 Vídeos</h4>
+              <ul class="rec-list">
+                <li><span class="r-ic">🎬</span><span><span class="r-tt">A11y Check — Duolingo com leitor de tela</span><span class="r-src">YouTube · [link]</span></span></li>
+                <li><span class="r-ic">🎬</span><span><span class="r-tt">6 things Duolingo could improve (a11y)</span><span class="r-src">YouTube · [link]</span></span></li>
+                <li><span class="r-ic">🎬</span><span><span class="r-tt">Como pessoas cegas usam o celular</span><span class="r-src">YouTube · [link]</span></span></li>
+              </ul>
             </div>
-            <div class="media-card step">
-              <div class="src reddit">🟠 Reddit</div>
-              <div class="media-ph">[ print do post/comentário aqui ]</div>
-              <div class="cap"><span class="q">“The images have no labels — VoiceOver skips everything.”</span><span class="who">baixa visão · 1.1.1 / 1.4.3</span></div>
-            </div>
-            <div class="media-card step">
-              <div class="src forum">🟢 Fórum oficial</div>
-              <div class="media-ph">[ print do tópico do fórum aqui ]</div>
-              <div class="cap"><span class="q">“Buttons announced as just ‘button’, no description.”</span><span class="who">VoiceOver · 3.3.2 / 4.1.2</span></div>
+            <div>
+              <h4 class="col-h">📄 Artigos &amp; padrões</h4>
+              <ul class="rec-list">
+                <li><span class="r-ic">📘</span><span><span class="r-tt">WCAG 2.1 (W3C)</span><span class="r-src">w3.org/TR/WCAG21</span></span></li>
+                <li><span class="r-ic">🌊</span><span><span class="r-tt">WebAIM — recursos de acessibilidade</span><span class="r-src">webaim.org</span></span></li>
+                <li><span class="r-ic">🇧🇷</span><span><span class="r-tt">eMAG — Governo Federal</span><span class="r-src">gov.br/governodigital · eMAG</span></span></li>
+                <li><span class="r-ic">💬</span><span><span class="r-tt">r/duolingo — "Not really accessible"</span><span class="r-src">reddit.com</span></span></li>
+              </ul>
             </div>
           </div>
-          <p class="muted step" style="font-weight:800; font-size:14px">📺 Também há vídeos no YouTube (“A11y Check”, “6 things Duolingo could improve”) reclamando do mesmo.</p>
         </div>
         <div class="corner-num">15</div>
       </section>
@@ -513,7 +530,7 @@
            <video class="screen-vid" src="images/leitor-celular.mp4" controls playsinline></video> -->
       <section class="slide" data-title="Leitor de tela no celular">
         <div class="ob-stage top">
-          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
+          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_potion.gif" alt="Duo"></div>
             <div class="bubble">Chega de teoria. Olha como é <strong>de verdade</strong> usar o Duolingo com um <strong>leitor de tela</strong> no celular. 🎧</div></div>
           <div class="demo">
             <div>
@@ -541,7 +558,7 @@
       <!-- 16 — CONCLUSÃO -->
       <section class="slide" data-title="Conclusão" data-cta="CONCLUIR">
         <div class="ob-stage top">
-          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo-walking.png" alt="Duo decidido"></div>
+          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_cheer.gif" alt="Duo decidido"></div>
             <div class="bubble">Pra o Duolingo melhorar — <strong>nesta ordem</strong> de prioridade:</div></div>
           <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:30px; align-items:center;">
             <ul class="duo-list">
@@ -586,7 +603,16 @@
   </div><!-- /viewport -->
 </div><!-- /pres -->
 
+<div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+  <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Anterior">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav next" id="lightbox-next" aria-label="Próxima">›</button>
+  <span class="lightbox-count" id="lightbox-count"></span>
+</div>
+
 <script src="js/engine.js"></script>
 <script src="js/intro.js"></script>
+<script src="js/lightbox.js"></script>
 </body>
 </html>
