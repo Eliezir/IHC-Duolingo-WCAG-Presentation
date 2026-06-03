@@ -638,5 +638,23 @@ table.map td:first-child{ font-weight:900; }
   font-family:ui-monospace,Menlo,monospace; font-size:13px; line-height:1.55; color:#cdd6da; overflow:auto; max-height:420px; white-space:pre; }
 .code-evid .cm{ color:#7d8c93; } .code-evid .bad{ color:#ff9a9a; } .code-evid .good{ color:#9be37d; font-weight:700; }
 
+/* anatomia do código WCAG (Princípio · Diretriz · Critério) */
+.anatomy{ display:flex; align-items:flex-start; justify-content:center; gap:14px; margin-top:14px; }
+.an-part{ display:flex; flex-direction:column; align-items:center; gap:9px; max-width:240px; }
+.an-num{ width:104px; height:104px; border-radius:22px; display:flex; align-items:center; justify-content:center;
+  font-size:62px; font-weight:900; color:#fff; box-shadow:0 6px 0 rgba(0,0,0,.18); }
+.an-num.p{ background:var(--feather); box-shadow:0 6px 0 var(--green-dk); }
+.an-num.g{ background:var(--jeans); box-shadow:0 6px 0 var(--whale); }
+.an-num.c{ background:var(--beetle); box-shadow:0 6px 0 #9b4dde; }
+.an-lbl{ font-weight:900; font-size:15px; text-transform:uppercase; letter-spacing:.6px; color:var(--eel); }
+.an-sub{ font-weight:700; font-size:14px; color:var(--wolf); text-align:center; line-height:1.3; }
+.an-dot{ font-size:60px; font-weight:900; color:var(--hare); line-height:104px; }
+.an-key{ align-self:center; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0 2px;
+  margin-top:24px; background:var(--polar); border:2px solid var(--swan); border-bottom-width:4px;
+  border-radius:16px; padding:14px 24px; font-weight:800; font-size:16px; color:var(--eel); }
+.an-key .poc{ width:26px; height:26px; font-size:14px; margin:0 6px 0 12px; vertical-align:middle; }
+.an-key .poc.k1{ background:var(--green-dk); } .an-key .poc.k2{ background:var(--whale); }
+.an-key .poc.k3{ background:#9a7400; } .an-key .poc.k4{ background:var(--beetle); }
+
 /* foco visível no botão — acessibilidade da própria apresentação */
 .duo-btn:focus-visible{ outline:4px solid #1899D6; outline-offset:3px; }
