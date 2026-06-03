@@ -636,11 +636,11 @@
           #scaler:has(.vd-demo.active) .toc-toggle{ display:none !important; }
 
           .slide.vd-demo{ background:#0b1116; padding:0; overflow:hidden; }
-          .vd-demo .vd-eyebrow{ position:absolute; top:16px; left:0; right:0; text-align:center; z-index:6;
-            font-size:13px; font-weight:900; letter-spacing:1.8px; text-transform:uppercase; color:#7fd0ff; }
+          .vd-demo .vd-eyebrow{ position:absolute; top:20px; left:28px; max-width:320px; text-align:left; z-index:6;
+            font-size:13px; font-weight:900; letter-spacing:1.8px; text-transform:uppercase; color:#7fd0ff; line-height:1.4; }
 
-          .vd-demo .vd-frame{ position:absolute; top:62px; left:50%; transform:translateX(-50%);
-            width:338px; height:600px; border-radius:30px; overflow:hidden; background:#000;
+          .vd-demo .vd-frame{ position:absolute; top:14px; left:50%; transform:translateX(-50%);
+            width:378px; height:672px; border-radius:30px; overflow:hidden; background:#000;
             border:7px solid #1b2730; box-shadow:0 20px 55px rgba(0,0,0,.6); z-index:2; }
           .vd-demo .vd-frame video{ width:100%; height:100%; object-fit:contain; display:block; background:#000; }
 
@@ -651,7 +651,7 @@
           .vd-demo .vd-issue{ position:absolute; inset:0; z-index:4; pointer-events:none; }
           .vd-demo .vd-issue.step.show{ animation:none; opacity:1; }   /* cancela o popBounce padrão */
           .vd-demo .vd-panel{ position:absolute; top:72px; height:566px; width:398px; box-sizing:border-box;
-            background:rgba(14,22,29,.95); border:2px solid rgba(255,255,255,.10); border-radius:20px;
+            background:#0e161d; border:2px solid rgba(255,255,255,.10); border-radius:20px;
             padding:22px 22px 20px; color:#eef3f6; display:flex; flex-direction:column; gap:13px;
             opacity:0; transition:opacity .42s ease, transform .42s cubic-bezier(.34,1.4,.64,1); }
           .vd-demo .vd-left{ left:28px;  transform:translateX(-30px); }
