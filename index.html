@@ -416,6 +416,31 @@
         <div class="corner-num">09</div>
       </section>
 
+      <!-- CHECKLIST MANUAL · 05 — REDIMENSIONAMENTO / ZOOM (RESSALVA) -->
+      <section class="slide" data-title="Checklist 5 · Redimensionamento e zoom">
+        <div class="ob-stage">
+          <div class="check-head is-warn">
+            <span class="check-num">5</span>
+            <h2 class="title">Redimensionamento e zoom</h2>
+            <span class="status warn"><span class="ico">!</span> Passou com ressalva</span>
+          </div>
+          <div class="check-body">
+            <div class="check-text">
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_potion.gif" alt="Duo"></div>
+                <div class="bubble">Dá pra dar zoom de <strong>200%</strong>? Quase tudo aguenta… <span class="crit">menos um canto</span>. 🔍</div></div>
+              <div style="margin-top:2px"><span class="tag wcag">WCAG 1.4.4</span><span class="tag AA">Nível AA</span></div>
+              <div class="kv">
+                <div class="k">✅ O que vai bem</div><div class="v fix">A <strong>trilha central</strong> se adapta de boa a <strong>200%</strong> de zoom — texto cresce sem quebrar.</div>
+                <div class="k">⚠️ Ressalva</div><div class="v">A <strong>barra lateral</strong> (missões/ligas) não tem rolagem própria: o rodapé dela fica <strong>inacessível</strong> sem percorrer a página inteira.</div>
+                <div class="k">🛠️ Correção</div><div class="v fix">Dar <code>overflow</code> interno à barra lateral pra alcançar o rodapé a 200%.</div>
+              </div>
+            </div>
+            <div class="shot"><img src="images/ev-05-zoom.png" alt="Duolingo com zoom de 200%: a trilha cresce e se mantém legível, mas a barra lateral à direita fica cortada"></div>
+          </div>
+        </div>
+        <div class="corner-num">10</div>
+      </section>
+
       <!-- 10 — BOTÃO DE LIÇÃO -->
       <section class="slide" data-title="Botão de lição sem rótulo">
         <div class="ob-stage">
