@@ -315,7 +315,7 @@
               </div>
             </div>
             <div>
-              <div class="title-demo" id="title-demo">
+              <div class="title-demo fs-demo" id="title-demo">
                 <div class="title-browser" role="img" aria-label="Navegando entre Ligas e Perfil no Duolingo; a aba do navegador mostra sempre o mesmo título 'Duolingo - O jeito de aprender mais popular do mundo'">
                   <div class="browser-tabs">
                     <div class="b-tab"><img class="b-fav" src="images/duolingo-favicon.png" alt=""><span class="b-tab-title">Duolingo - O jeito de aprender mais popular do mundo</span><span class="b-x">✕</span></div>
@@ -441,121 +441,143 @@
         <div class="corner-num">10</div>
       </section>
 
-      <!-- 10 — BOTÃO DE LIÇÃO -->
-      <section class="slide" data-title="Botão de lição sem rótulo">
+      <!-- CHECKLIST MANUAL · 06 — TECLADO E FOCO VISÍVEL -->
+      <section class="slide" data-title="Checklist 6 · Teclado e foco visível">
         <div class="ob-stage">
-          <div class="problem">
-            <div>
-              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_potion.gif" alt="Duo"></div>
-                <div class="bubble">O botão de fechar a lição não tem rótulo. O leitor diz só “botão”. Aperta e… <span class="crit">perdeu o progresso</span>. 😬</div></div>
-              <div style="margin-top:12px"><span class="tag crit">CRÍTICO</span><span class="tag wcag">3.3.2 · 4.1.2</span><span class="tag AA">Nível AA</span></div>
+          <div class="check-head is-fail">
+            <span class="check-num">6</span>
+            <h2 class="title">Teclado e foco visível</h2>
+            <span class="status fail"><span class="ico">✕</span> Não passou</span>
+          </div>
+          <div class="check-body">
+            <div class="check-text">
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_exercise.gif" alt="Duo"></div>
+                <div class="bubble">Navegando só de teclado, dá pra ver <strong>onde você está</strong>? No Duolingo… <span class="crit">não dá</span>. ⌨️</div></div>
+              <div style="margin-top:2px"><span class="tag wcag">WCAG 2.4.7</span><span class="tag AA">Nível AA</span></div>
               <div class="kv">
-                <div class="k">💥 Impacto</div><div class="v">Sem texto, aria-label ou título: ação destrutiva sem aviso na tela de lição.</div>
-                <div class="k">🛠️ Correção</div><div class="v fix"><code>aria-label="Fechar lição"</code> + ícone com <code>aria-hidden</code>.</div>
+                <div class="k">🔎 Problema</div><div class="v">A ordem de tabulação até funciona, mas o CSS aplica <code>outline: none</code> no foco. O ponteiro lógico anda pelos elementos e <strong>nenhuma borda aparece</strong> — impossível navegar com precisão.</div>
+                <div class="k">🛠️ Correção</div><div class="v fix">Restaurar o indicador: <code>:focus-visible { outline: 3px solid #58cc02 }</code>.</div>
               </div>
             </div>
-            <div class="shot"><img src="images/licao-natal.png" alt="Tela de exercício do Duolingo com o botão X de fechar"></div>
-          </div>
-        </div>
-        <div class="corner-num">10</div>
-      </section>
-
-      <!-- TELAS DE ATIVIDADE — 3.7 / 3.8 / 3.9 (achados de dentro da lição) -->
-      <section class="slide" data-title="Telas de atividade">
-        <div class="ob-stage">
-          <div class="problem">
-            <div>
-              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
-                <div class="bubble">Dentro da lição, o WAVE achou <strong>mais três</strong> que só aparecem jogando. 🔎</div></div>
-              <div style="margin-top:12px"><span class="tag wcag">1.3.1 · 2.4.1 · 4.1.2</span><span class="tag A">Nível A</span></div>
-              <ul class="duo-list" style="margin-top:12px">
-                <li class="warn step"><span class="bullet">!</span> <strong>Sem regiões de página</strong>: sem <code>&lt;main&gt;</code>/<code>&lt;nav&gt;</code>, o leitor percorre cabeçalho, XP e vidas <em>a cada questão</em>.</li>
-                <li class="warn step"><span class="bullet">!</span> <strong>Progressbar</strong> com <code>aria-label="Day"</code> e <code>aria-valuenow</code> decimal (<code>0.0138</code>) — ilegível em voz alta.</li>
-                <li class="warn step"><span class="bullet">!</span> <strong>Respostas erradas</strong> ficam <code>aria-disabled</code> mas ainda recebem foco; o grupo se chama só <code>"choice"</code>.</li>
-              </ul>
+            <div class="video-demo fs-demo">
+              <div class="shot"><video src="images/ev-06-focus.mp4" muted loop playsinline preload="metadata" aria-label="Gravação navegando pelo Duolingo só com o teclado: o foco se move, mas nenhuma borda visível aparece"></video></div>
+              <button class="demo-play" aria-label="Reproduzir em tela cheia"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg></button>
             </div>
-            <div class="shot"><img src="images/licao-natal.png" alt="Tela de exercício do Duolingo durante a lição"></div>
-          </div>
-        </div>
-        <div class="corner-num">16</div>
-      </section>
-
-      <!-- 11 — REDUNDÂNCIA -->
-      <section class="slide" data-title="Links/alt redundantes">
-        <div class="ob-stage">
-          <div class="problem">
-            <div>
-              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_twirl.gif" alt="Duo"></div>
-                <div class="bubble">Links repetidos e <strong>alt</strong> duplicado. eco… eco… eco. 🔁</div></div>
-              <div style="margin-top:12px"><span class="tag wcag">2.4.4 · 1.1.1</span><span class="tag A">Nível A</span></div>
-              <div class="kv">
-                <div class="k">💥 Impacto</div><div class="v">Alt igual ao texto vizinho e links de mesmo destino confundem a navegação por lista.</div>
-                <div class="k">🛠️ Correção</div><div class="v fix">Usar <code>alt=""</code> quando já há texto; consolidar links iguais.</div>
-              </div>
-            </div>
-            <div class="shot"><img src="images/menu-redundant.png" alt="WAVE indicando link redundante no menu"></div>
           </div>
         </div>
         <div class="corner-num">11</div>
       </section>
 
-      <!-- 12 — ARIA / TABINDEX -->
-      <section class="slide" data-title="ARIA e tabindex">
+      <!-- CHECKLIST MANUAL · 07 — FORMULÁRIO, ETIQUETAS E ERROS -->
+      <section class="slide" data-title="Checklist 7 · Formulário, etiquetas e erros">
         <div class="ob-stage">
-          <div class="problem">
-            <div>
-              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_exercise.gif" alt="Duo"></div>
-                <div class="bubble">24 “botões” que na verdade são <code>&lt;div&gt;</code>, e tabindex bagunçando o foco. 🤦</div></div>
-              <div style="margin-top:12px"><span class="tag wcag">4.1.2 · 2.4.3</span><span class="tag A">Nível A</span><span class="tag n">24 + 24</span></div>
+          <div class="check-head is-fail">
+            <span class="check-num">7</span>
+            <h2 class="title">Formulário, etiquetas e erros</h2>
+            <span class="status fail"><span class="ico">✕</span> Não passou</span>
+          </div>
+          <div class="check-body">
+            <div class="check-text">
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_potion.gif" alt="Duo"></div>
+                <div class="bubble">Acertou ou errou a questão? Pro leitor de tela… <span class="crit">silêncio total</span>. 🤐</div></div>
+              <div style="margin-top:2px"><span class="tag wcag">3.3.1 · 4.1.3</span><span class="tag AA">Nível AA</span></div>
               <div class="kv">
-                <div class="k">💥 Impacto</div><div class="v">Elementos não-nativos podem não receber foco; tabindex altera a ordem esperada.</div>
-                <div class="k">🛠️ Correção</div><div class="v fix">Preferir <code>&lt;button&gt;</code>; usar só <code>tabindex="0"</code> ou <code>"-1"</code>.</div>
+                <div class="k">🔎 Problema</div><div class="v">Na lição, o feedback (<code>PlayerFooter</code>) injeta "Resposta correta" de forma assíncrona <strong>sem <code>aria-live</code></strong>. O leitor de tela não anuncia o resultado — quem é cego não sabe se acertou.</div>
+                <div class="k">🛠️ Correção</div><div class="v fix">Marcar a área de feedback com <code>role="alert"</code> + <code>aria-live="assertive"</code>.</div>
               </div>
             </div>
-            <div class="shot"><img src="images/tabindex.png" alt="WAVE destacando tabindex personalizado na trilha"></div>
+            <div class="shot"><img src="images/ev-07-aria.png" alt="DevTools do Duolingo: o div id='session/PlayerFooter' com o h2 'Resposta correta' não tem aria-live nem role=alert"></div>
+          </div>
+        </div>
+        <div class="corner-num">10</div>
+      </section>
+
+      <!-- CHECKLIST MANUAL · 08 — CONTEÚDO EM MOVIMENTO (RESSALVA) -->
+      <section class="slide" data-title="Checklist 8 · Conteúdo em movimento">
+        <div class="ob-stage">
+          <div class="check-head is-warn">
+            <span class="check-num">8</span>
+            <h2 class="title">Conteúdo em movimento</h2>
+            <span class="status warn"><span class="ico">!</span> Passou com ressalva</span>
+          </div>
+          <div class="check-body">
+            <div class="check-text">
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_butterfly.gif" alt="Duo"></div>
+                <div class="bubble">Tanta animação cansa? Dá pra desligar… mas <span class="crit">só lá no fundo</span> das configurações. 🌀</div></div>
+              <div style="margin-top:2px"><span class="tag wcag">WCAG 2.2.2</span><span class="tag A">Nível A</span></div>
+              <div class="kv">
+                <div class="k">✅ O que vai bem</div><div class="v fix">Existe um <strong>botão global</strong> nas preferências pra desativar as animações dos avatares.</div>
+                <div class="k">⚠️ Ressalva</div><div class="v">Não há <strong>atalho local</strong> pra congelar rápido durante a lição — quem é sensível a movimento pode cansar antes de achar a opção.</div>
+                <div class="k">🛠️ Correção</div><div class="v fix">Oferecer um controle de <strong>pausar/parar</strong> acessível na própria tela da lição.</div>
+              </div>
+            </div>
+            <div class="shot"><img src="images/ev-08-motion.png" alt="Página de Preferências do Duolingo com o botão de Animações (ligado) na seção Experiência"></div>
+          </div>
+        </div>
+        <div class="corner-num">11</div>
+      </section>
+
+      <!-- CHECKLIST MANUAL · 09 — MÍDIAS E ÁUDIO (RESSALVA) -->
+      <section class="slide" data-title="Checklist 9 · Mídias e áudio">
+        <div class="ob-stage">
+          <div class="check-head is-warn">
+            <span class="check-num">9</span>
+            <h2 class="title">Mídias e áudio</h2>
+            <span class="status warn"><span class="ico">!</span> Passou com ressalva</span>
+          </div>
+          <div class="check-body">
+            <div class="check-text">
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_potion.gif" alt="Duo"></div>
+                <div class="bubble">Tem atividade que é <strong>só áudio</strong> — "O que você ouve?". Sem escutar, <span class="crit">empaca</span>. 🔊</div></div>
+              <div style="margin-top:2px"><span class="tag wcag">WCAG 1.2.1</span><span class="tag A">Nível A</span></div>
+              <div class="kv">
+                <div class="k">⚠️ Ressalva</div><div class="v">Existem exercícios <strong>100% de áudio</strong> (tipo "What do you hear?") sem alternativa visual — barreira pra quem é <strong>surdo</strong> ou tem perda auditiva.</div>
+                <div class="k">✅ O que ameniza</div><div class="v fix">Dá pra <strong>desativar os "Exercícios de escuta"</strong> nas Preferências e seguir o curso sem eles.</div>
+                <div class="k">🛠️ Ideal</div><div class="v fix">Oferecer transcrição/alternativa — e manter a opção de desativar fácil de achar.</div>
+              </div>
+            </div>
+            <div class="complaints stack ev">
+              <div class="complaint"><img src="images/ev-09-settings.png" alt="Preferências do Duolingo com o botão 'Exercícios de escuta' que permite desativar as atividades de áudio"></div>
+              <div class="complaint"><img src="images/ev-09-audio.png" alt="Atividade do Duolingo 'What do you hear?' que é só áudio: um botão de som e as opções dock/deck, sem texto da frase"></div>
+              <span class="deck-badge" aria-hidden="true">🔍 2</span>
+            </div>
           </div>
         </div>
         <div class="corner-num">12</div>
       </section>
 
-      <!-- 13 — TRILHA -->
-      <section class="slide" data-title="A trilha do Duolingo">
-        <div class="ob-stage top">
-          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_butterfly.gif" alt="Duo"></div>
-            <div class="bubble">A trilha é linda… mas cada ícone é uma imagem sem <strong>alt</strong> e cada nó é uma <code>div</code>. 🙈</div></div>
-          <div style="display:grid; grid-template-columns:300px 1fr; gap:48px; align-items:center;">
-            <div class="trilha">
-              <div class="node active"><div class="start-bubble">COMEÇAR</div>⭐</div>
-              <div class="node done" style="margin-left:28px;">📖</div>
-              <div class="node done" style="margin-left:-28px;">💪</div>
-              <div class="node locked" style="margin-left:22px;">🏆</div>
+      <!-- CHECKLIST MANUAL · 10 — ESTRUTURA E SEMÂNTICA HTML (RESSALVA) -->
+      <section class="slide" data-title="Checklist 10 · Estrutura e semântica HTML">
+        <div class="ob-stage">
+          <div class="check-head is-warn">
+            <span class="check-num">10</span>
+            <h2 class="title">Estrutura e semântica HTML</h2>
+            <span class="status warn"><span class="ico">!</span> Passou com ressalva</span>
+          </div>
+          <div class="check-body">
+            <div class="check-text">
+              <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
+                <div class="bubble"><code>lang</code> nas frases? Mandou bem. Mas <code>&lt;main&gt;</code>/<code>&lt;nav&gt;</code>? <span class="crit">Sumiram</span> num mar de <code>&lt;div&gt;</code>. 🏗️</div></div>
+              <div style="margin-top:2px"><span class="tag wcag">WCAG 1.3.1</span><span class="tag A">Nível A</span></div>
+              <div class="kv">
+                <div class="k">✅ O que vai bem</div><div class="v fix">Usa <code>lang</code> dinâmico nos blocos de resposta (<code>lang="fr"</code>) — a pronúncia do leitor de tela sai certa.</div>
+                <div class="k">⚠️ Ressalva</div><div class="v">Faltam <strong>landmarks</strong> (<code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>): tudo é <code>&lt;div&gt;</code> genérica, então o leitor não tem "regiões" pra pular.</div>
+                <div class="k">🛠️ Correção</div><div class="v fix">Ancorar as áreas com <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;aside&gt;</code>.</div>
+              </div>
             </div>
-            <ul class="duo-list">
-              <li class="warn step"><span class="bullet">!</span> Cada ícone é uma <strong>imagem</strong> sem texto alternativo (1.1.1).</li>
-              <li class="warn step"><span class="bullet">!</span> Os nós são <code>div</code> com <code>role="button"</code> e <code>tabindex</code> (4.1.2).</li>
-              <li class="step"><span class="bullet">→</span> Por isso a trilha é o <strong>ponto de partida</strong> da avaliação.</li>
-            </ul>
+            <pre class="code-evid"><span class="cm">// ❌ só div genérica — sem regiões</span>
+&lt;div class="kPqwA"&gt;
+  &lt;div&gt;…trilha…&lt;/div&gt;
+  &lt;div&gt;…missões…&lt;/div&gt;
+&lt;/div&gt;
+
+<span class="cm">// ✅ com landmarks o leitor pula direto</span>
+<span class="good">&lt;nav&gt;</span>…menu…<span class="good">&lt;/nav&gt;</span>
+<span class="good">&lt;main&gt;</span>…trilha…<span class="good">&lt;/main&gt;</span>
+<span class="good">&lt;aside&gt;</span>…missões…<span class="good">&lt;/aside&gt;</span></pre>
           </div>
         </div>
-        <div class="corner-num">13</div>
-      </section>
-
-      <!-- 14 — MAPEAMENTO -->
-      <section class="slide" data-title="Mapeamento por princípio">
-        <div class="ob-stage top">
-          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_gem.gif" alt="Duo"></div>
-            <div class="bubble">Resumindo tudo, por <strong>princípio</strong> da WCAG:</div></div>
-          <table class="map">
-            <thead><tr><th>Perceptível (1.x)</th><th>Operável (2.x)</th><th>Compreensível (3.x)</th><th>Robusto (4.x)</th></tr></thead>
-            <tbody><tr>
-              <td>43 imagens sem alt · 20 contrastes · 1 alt redundante</td>
-              <td>24 tabindex · 2 links-imagem sem alt · 1 link redundante · sem regiões de página nas atividades</td>
-              <td>Botão de lição sem rótulo — leitor anuncia só “botão”</td>
-              <td>24 ARIA buttons não-nativos · ~26 aria-labels a verificar · progressbar sem contexto · aria-disabled inconsistente</td>
-            </tr></tbody>
-          </table>
-        </div>
-        <div class="corner-num">14</div>
+        <div class="corner-num">16</div>
       </section>
 
       <!-- 15 — RECOMENDAÇÕES (vídeos & artigos) -->
@@ -781,20 +803,17 @@
       <!-- 16 — CONCLUSÃO -->
       <section class="slide" data-title="Conclusão" data-cta="CONCLUIR">
         <div class="ob-stage top">
-          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo_cheer.gif" alt="Duo decidido"></div>
-            <div class="bubble">Pra o Duolingo melhorar — <strong>nesta ordem</strong> de prioridade:</div></div>
-          <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:30px; align-items:center;">
-            <ul class="duo-list">
-              <li class="warn step"><span class="bullet">1</span> Texto alternativo nas 43 imagens sem <code>alt</code>.</li>
-              <li class="warn step"><span class="bullet">2</span> Corrigir os 20 erros de contraste (≥ 4,5:1).</li>
-              <li class="warn step"><span class="bullet">3</span> Rótulo acessível no botão de fechar lição.</li>
-              <li class="step"><span class="bullet">4</span> Trocar ARIA não-nativo por HTML semântico.</li>
-              <li class="step"><span class="bullet">5</span> Regiões <code>&lt;main&gt;</code>/<code>&lt;nav&gt;</code> nas telas de atividade.</li>
-              <li class="step"><span class="bullet">6</span> Progressbar legível + <code>aria-disabled</code> sem foco.</li>
-            </ul>
-            <video class="corner-vid" src="images/eddy-session-end.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
-          </div>
-          <p class="muted step" style="font-weight:800; font-size:14px">Complementar com testes manuais e com usuários reais com deficiência.</p>
+          <div class="ob-speak"><div class="ob-duo sm"><img src="images/duo-cry.gif" alt="Duo triste"></div>
+            <div class="bubble">Por mais <strong>lindo</strong> que seja, bonito <strong>não é o mesmo que acessível</strong>. Pra o Duolingo ficar perfeito — <strong>nesta ordem</strong> — falta:</div></div>
+          <ul class="duo-list" style="display:grid; grid-auto-flow:column; grid-template-rows:repeat(3,auto); gap:13px 24px; margin-top:4px;">
+            <li class="warn step"><span class="bullet">1</span> Texto alternativo nas 43 imagens sem <code>alt</code>.</li>
+            <li class="warn step"><span class="bullet">2</span> Corrigir os 20 erros de contraste (≥ 4,5:1).</li>
+            <li class="warn step"><span class="bullet">3</span> Rótulo acessível no botão de fechar lição.</li>
+            <li class="step"><span class="bullet">4</span> Trocar ARIA não-nativo por HTML semântico.</li>
+            <li class="step"><span class="bullet">5</span> Regiões <code>&lt;main&gt;</code>/<code>&lt;nav&gt;</code> nas telas de atividade.</li>
+            <li class="step"><span class="bullet">6</span> Progressbar legível + <code>aria-disabled</code> sem foco.</li>
+          </ul>
+          <p class="muted step" style="font-weight:800; font-size:14px; margin-top:12px">Complementar com testes manuais e com usuários reais com deficiência.</p>
         </div>
         <div class="corner-num">16</div>
       </section>

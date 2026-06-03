@@ -1,28 +1,39 @@
 /* ============================================================
-   Demo do "Título da página": play -> tela cheia (toca a animação),
-   Esc/clique fecha. Fora do #scaler via Fullscreen API no elemento.
+   Demos em tela cheia (.fs-demo): o botão .demo-play abre o
+   elemento em tela cheia (Fullscreen API, fora do #scaler).
+   - demos com CSS :fullscreen tocam a animação (ex.: título)
+   - demos com <video> só dão play quando entram em tela cheia
+   Esc / clique no fundo fecha; setas/espaço não navegam por trás.
    ============================================================ */
 (function () {
   'use strict';
-  const td   = document.getElementById('title-demo');
-  const play = document.getElementById('demo-play');
-  if (!td || !play) return;
+  const demos = Array.from(document.querySelectorAll('.fs-demo'));
+  if (!demos.length) return;
 
-  function enter() {
-    const fn = td.requestFullscreen || td.webkitRequestFullscreen || td.msRequestFullscreen;
-    if (fn) fn.call(td);
-  }
-  function isFull() { return (document.fullscreenElement || document.webkitFullscreenElement) === td; }
+  const reqFS  = (el) => (el.requestFullscreen || el.webkitRequestFullscreen || function () {}).call(el);
+  const exitFS = ()   => (document.exitFullscreen || document.webkitExitFullscreen || function () {}).call(document);
+  const fsEl   = ()   => document.fullscreenElement || document.webkitFullscreenElement || null;
 
-  play.addEventListener('click', (e) => { e.stopPropagation(); enter(); });
-  // clicar no fundo (fora do navegador) em tela cheia fecha
-  td.addEventListener('click', (e) => {
-    if (isFull() && e.target === td) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+  demos.forEach((demo) => {
+    const btn = demo.querySelector('.demo-play');
+    if (btn) btn.addEventListener('click', (e) => { e.stopPropagation(); reqFS(demo); });
+    demo.addEventListener('click', (e) => { if (fsEl() === demo && e.target === demo) exitFS(); });
   });
 
-  // enquanto em tela cheia, setas/espaço não navegam os slides por trás
+  function sync() {
+    const cur = fsEl();
+    document.querySelectorAll('.fs-demo video').forEach((v) => {
+      if (v.closest('.fs-demo') === cur) { try { v.currentTime = 0; v.play(); } catch (e) {} }
+      else v.pause();
+    });
+  }
+  document.addEventListener('fullscreenchange', sync);
+  document.addEventListener('webkitfullscreenchange', sync);
+
+  // em tela cheia de um demo, setas/espaço não trocam os slides por trás
   window.addEventListener('keydown', (e) => {
-    if (!isFull()) return;
+    const cur = fsEl();
+    if (!cur || !cur.classList || !cur.classList.contains('fs-demo')) return;
     if (['ArrowLeft', 'ArrowRight', ' '].includes(e.key)) { e.preventDefault(); e.stopImmediatePropagation(); }
   }, true);
 })();

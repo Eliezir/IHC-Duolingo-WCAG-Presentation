@@ -344,6 +344,7 @@ table.map td:first-child{ font-weight:900; }
 .check-body{ display:grid; grid-template-columns:1.02fr .98fr; gap:32px; align-items:center; flex:1; min-height:0; }
 .check-text{ display:flex; flex-direction:column; gap:14px; }
 .shot.ph{ background:var(--polar); border-style:dashed; color:var(--hare); font-weight:800; font-size:14px; }
+.shot video{ width:100%; height:100%; max-height:414px; object-fit:contain; display:block; background:#000; }
 
 /* ============================================================
    INTRO cinemática — Google → digita → loader → capa
@@ -624,6 +625,18 @@ table.map td:first-child{ font-weight:900; }
 .complaints.stack.ev .complaint:nth-child(2){ transform:none; z-index:2; box-shadow:0 16px 38px rgba(0,0,0,.24); }
 .complaints.stack.ev:hover .complaint:nth-child(2){ transform:translateY(-7px) scale(1.015); }
 .complaints.stack.ev .deck-badge{ left:auto; right:6px; top:-10px; }
+
+/* demo de vídeo: pausado + play -> tela cheia toca */
+.video-demo{ position:relative; }
+.video-demo:fullscreen{ background:#0d1418; display:flex; align-items:center; justify-content:center; }
+.video-demo:fullscreen .demo-play{ display:none; }
+.video-demo:fullscreen .shot{ max-height:none; border:none; background:transparent; }
+.video-demo:fullscreen .shot video{ width:min(92vw,1400px); height:auto; max-height:92vh; }
+
+/* bloco de código como evidência (ex.: aria-live) */
+.code-evid{ background:#1b2b34; border-radius:14px; border:3px solid var(--swan); padding:18px 20px; margin:0;
+  font-family:ui-monospace,Menlo,monospace; font-size:13px; line-height:1.55; color:#cdd6da; overflow:auto; max-height:420px; white-space:pre; }
+.code-evid .cm{ color:#7d8c93; } .code-evid .bad{ color:#ff9a9a; } .code-evid .good{ color:#9be37d; font-weight:700; }
 
 /* foco visível no botão — acessibilidade da própria apresentação */
 .duo-btn:focus-visible{ outline:4px solid #1899D6; outline-offset:3px; }
