@@ -531,14 +531,14 @@
                 <div class="bubble">Tem atividade que é <strong>só áudio</strong> — "O que você ouve?". Sem escutar, <span class="crit">empaca</span>. 🔊</div></div>
               <div style="margin-top:2px"><span class="tag wcag">WCAG 1.2.1</span><span class="tag A">Nível A</span></div>
               <div class="kv">
-                <div class="k">⚠️ Ressalva</div><div class="v">Existem exercícios <strong>100% de áudio</strong> (tipo "What do you hear?") sem alternativa visual — barreira pra quem é <strong>surdo</strong> ou tem perda auditiva.</div>
+                <div class="k">⚠️ Ressalva</div><div class="v">Existem exercícios <strong>100% de áudio</strong> sem alternativa visual — barreira pra quem é <strong>surdo</strong> ou tem perda auditiva.</div>
                 <div class="k">✅ O que ameniza</div><div class="v fix">Dá pra <strong>desativar os "Exercícios de escuta"</strong> nas Preferências e seguir o curso sem eles.</div>
                 <div class="k">🛠️ Ideal</div><div class="v fix">Oferecer transcrição/alternativa — e manter a opção de desativar fácil de achar.</div>
               </div>
             </div>
             <div class="complaints stack ev">
               <div class="complaint"><img src="images/ev-09-settings.png" alt="Preferências do Duolingo com o botão 'Exercícios de escuta' que permite desativar as atividades de áudio"></div>
-              <div class="complaint"><img src="images/ev-09-audio.png" alt="Atividade do Duolingo 'What do you hear?' que é só áudio: um botão de som e as opções dock/deck, sem texto da frase"></div>
+              <div class="complaint"><img src="images/ev-09-audio.png" alt="Atividade 'Toque no que escutar' do Duolingo: só áudio (botão de som + tartaruga) e blocos de palavras, sem a frase escrita; rodapé com 'Não posso ouvir agora'"></div>
               <span class="deck-badge" aria-hidden="true">🔍 2</span>
             </div>
           </div>
@@ -565,16 +565,7 @@
                 <div class="k">🛠️ Correção</div><div class="v fix">Ancorar as áreas com <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;aside&gt;</code>.</div>
               </div>
             </div>
-            <pre class="code-evid"><span class="cm">// ❌ só div genérica — sem regiões</span>
-&lt;div class="kPqwA"&gt;
-  &lt;div&gt;…trilha…&lt;/div&gt;
-  &lt;div&gt;…missões…&lt;/div&gt;
-&lt;/div&gt;
-
-<span class="cm">// ✅ com landmarks o leitor pula direto</span>
-<span class="good">&lt;nav&gt;</span>…menu…<span class="good">&lt;/nav&gt;</span>
-<span class="good">&lt;main&gt;</span>…trilha…<span class="good">&lt;/main&gt;</span>
-<span class="good">&lt;aside&gt;</span>…missões…<span class="good">&lt;/aside&gt;</span></pre>
+            <div class="shot"><img src="images/ev-10-structure.png" alt="Aba Structure do WAVE: só cabeçalhos, lista e iframes (nenhuma região main/nav) e 129 itens de ARIA cobrindo as divs genéricas"></div>
           </div>
         </div>
         <div class="corner-num">16</div>
